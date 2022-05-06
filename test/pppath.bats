@@ -13,6 +13,17 @@ setup () {
   [[ ${lines[1]} == /bin ]]
 }
 
+@test "Show tilda prefix path with quoting" {
+  PATH="$HOME:~:$HOME/bin:~/bin" run pppath
+
+  [[ $status == 0 ]]
+  [[ ${#lines[@]} == 4 ]]
+  [[ ${lines[0]} == '~' ]]
+  [[ ${lines[1]} == "'~'" ]]
+  [[ ${lines[2]} == '~/bin' ]]
+  [[ ${lines[3]} == "'~/bin'" ]]
+}
+
 @test "Show multiple paths." {
   PATH=/sbin:/bin:/usr/sbin:/usr/bin run pppath
 

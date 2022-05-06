@@ -122,6 +122,9 @@ Options:
         ~/* )
           local label="~${p:${#HOME}}"
           ;;
+        '~' | '~'/* )
+          local label="'~${p:1}'"
+          ;;
         * )
           local label=$p
           ;;
