@@ -116,10 +116,7 @@ Options:
     # $HOME.
     if [[ $format == pretty ]]; then
       case $p in
-        ~ )
-          local label='~'
-          ;;
-        ~/* )
+        ~ | ~/* )
           local label="~${p:${#HOME}}"
           ;;
         '~' | '~'/* )
