@@ -16,10 +16,11 @@ pppath () {
       --help | -h )
         echo -n "\
 Descriptions:
-  Pretty printer for \$PATH. This substitutes each path prefixes with a literal
-  tilda(~) if the prefix is \$HOME's value, the substitution is inspired by
-  zsh's \"print -D\". And this decorates each paths with some colors, but skips
-  decorations for an empty path.
+  A pretty printer for \$PATH. This splits \$PATH's value into multiple entries
+  per a colon and print them per lines. Also, by default, this substitutes each
+  path prefixes with a literal tilda(~) if the prefix is \$HOME's value, the
+  substitution is inspired by zsh's \"print -D\". And this decorates each paths
+  with some colors, but skips decorations for an empty path.
 
   1. If no directory exists at the path, Reverse Red
   2. If the path is duplicated, Red
