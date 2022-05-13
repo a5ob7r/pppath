@@ -1,7 +1,7 @@
 #!/usr/bin/env bats
 
 setup () {
-  source "$BATS_TEST_DIRNAME"/../pppath.sh
+  source "$BATS_TEST_DIRNAME"/../pppath
 }
 
 @test "Show paths." {

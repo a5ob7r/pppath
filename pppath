@@ -146,3 +146,9 @@ Options:
     fi
   done
 }
+
+# Skip a following command if this script is sourced by a shell.
+return 2>/dev/null
+
+# This must be executed only if a user run this script directly.
+pppath "$@"
